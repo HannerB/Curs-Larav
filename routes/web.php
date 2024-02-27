@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,7 @@ Route::get('/', function(){
 Route::get('/saludo/{nombre}', function($nombre){
     return "hola, $nombre";
 });
+
+Route::get('/usuarios', [UserController::class, 'index']);
 
 // route::view('/', 'welcome', ['mensaje' => 'este es un mensaje random']);
