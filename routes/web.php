@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('welcome');
 });
+
+// Route::get("/esperar", function(){
+//     return view("nuevavista");
+// });
+
+Route::get('/saludo/{nombre}', function($nombre){
+    return "hola, $nombre";
+});
+
+// route::view('/', 'welcome', ['mensaje' => 'este es un mensaje random']);
