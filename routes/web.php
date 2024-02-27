@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::get('/saludo/{nombre}', function($nombre){
 });
 
 Route::get('/usuarios', [UserController::class, 'index']);
+
+Route::get('/libros', [BookController::class,'index']);
 
 // route::view('/', 'welcome', ['mensaje' => 'este es un mensaje random']);
